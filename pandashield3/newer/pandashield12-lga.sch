@@ -22839,7 +22839,6 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <part name="GND57" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND58" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND59" library="SparkFun" deviceset="GND" device=""/>
-<part name="U$100" library="SparkFun" deviceset="INDUCTOR" device="CR54" value="3,3uH, 5A, EPCOS B82464G4332M , Farnell 7429410"/>
 <part name="D100" library="diode" deviceset="BAT54" device=""/>
 <part name="GND60" library="SparkFun" deviceset="GND" device=""/>
 <part name="FRAME6" library="frames" deviceset="DINA4_L" device=""/>
@@ -23274,6 +23273,7 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <attribute name="TP_SIGNAL_NAME" value=""/>
 </part>
 <part name="C33" library="rcl" deviceset="CPOL-EU" device="C/6032-28R" value="47uF/16V"/>
+<part name="L1" library="SparkFun" deviceset="INDUCTOR" device="CR75"/>
 </parts>
 <sheets>
 <sheet>
@@ -24035,7 +24035,6 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <instance part="GND57" gate="1" x="10.16" y="-15.24"/>
 <instance part="GND58" gate="1" x="25.4" y="-15.24"/>
 <instance part="GND59" gate="1" x="104.14" y="-27.94"/>
-<instance part="U$100" gate="G$1" x="81.28" y="27.94" rot="R90"/>
 <instance part="D100" gate="G$1" x="68.58" y="20.32" rot="R90"/>
 <instance part="GND60" gate="1" x="93.98" y="-5.08"/>
 <instance part="FRAME6" gate="G$1" x="-83.82" y="-83.82"/>
@@ -24056,6 +24055,7 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <instance part="C29" gate="G$1" x="99.06" y="17.78"/>
 <instance part="TP81" gate="G$1" x="68.58" y="7.62"/>
 <instance part="C33" gate="G$1" x="114.3" y="20.32"/>
+<instance part="L1" gate="G$1" x="81.28" y="27.94" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -24140,7 +24140,6 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <junction x="91.44" y="27.94"/>
 <label x="111.76" y="27.94" size="1.778" layer="95"/>
 <pinref part="R37" gate="G$1" pin="1"/>
-<pinref part="U$100" gate="G$1" pin="2"/>
 <pinref part="5V" gate="G$1" pin="1"/>
 <pinref part="TP55" gate="G$1" pin="TP"/>
 <pinref part="C9" gate="G$1" pin="1"/>
@@ -24153,6 +24152,7 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <pinref part="C33" gate="G$1" pin="+"/>
 <wire x1="114.3" y1="22.86" x2="114.3" y2="27.94" width="0.1524" layer="91"/>
 <junction x="114.3" y="27.94"/>
+<pinref part="L1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$33" class="2">
@@ -24169,10 +24169,10 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <junction x="68.58" y="27.94"/>
 <junction x="53.34" y="27.94"/>
 <pinref part="D100" gate="G$1" pin="C"/>
-<pinref part="U$100" gate="G$1" pin="1"/>
 <pinref part="U$3" gate="G$1" pin="PH"/>
 <pinref part="C15" gate="G$1" pin="1"/>
 <pinref part="TP54" gate="G$1" pin="TP"/>
+<pinref part="L1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="GND" class="2">
@@ -26755,7 +26755,7 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <pinref part="J1" gate="-25" pin="MS"/>
 </segment>
 </net>
-<net name="N$57" class="0">
+<net name="N$57" class="1">
 <segment>
 <wire x1="68.58" y1="129.54" x2="76.2" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="129.54" x2="76.2" y2="119.38" width="0.1524" layer="91"/>
@@ -26785,7 +26785,7 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <pinref part="TP50" gate="G$1" pin="TP"/>
 </segment>
 </net>
-<net name="12V5" class="0">
+<net name="12V5" class="1">
 <segment>
 <wire x1="83.82" y1="129.54" x2="88.9" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="129.54" x2="88.9" y2="124.46" width="0.1524" layer="91"/>
@@ -26889,7 +26889,7 @@ Herstellerbez.:  SDBMF-00915B0T2</description>
 <pinref part="TP11" gate="G$1" pin="TP"/>
 </segment>
 </net>
-<net name="12V5VIN" class="2">
+<net name="12V5VIN" class="1">
 <segment>
 <wire x1="50.8" y1="111.76" x2="50.8" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="129.54" x2="48.26" y2="129.54" width="0.1524" layer="91"/>
