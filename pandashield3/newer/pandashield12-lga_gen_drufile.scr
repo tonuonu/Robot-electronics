@@ -1,2 +1,0 @@
-DRC SAVE 'C:/Users/t/Desktop/Robot-electronics/pandashield3/newer/pandashield12-lga.dru';
-RUN brd_to_dsn_v6.ulp f;
