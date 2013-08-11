@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -79,12 +79,26 @@
 <layer number="105" name="tPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="106" name="bPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="107" name="Crop" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="108" name="fp8" color="7" fill="1" visible="no" active="yes"/>
+<layer number="109" name="fp9" color="7" fill="1" visible="no" active="yes"/>
+<layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
+<layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="124" name="bTestmark" color="7" fill="1" visible="no" active="yes"/>
 <layer number="125" name="_tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="201" name="201bmp" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="202" name="202bmp" color="3" fill="10" visible="yes" active="yes"/>
@@ -110,6 +124,8 @@
 <layer number="222" name="222bmp" color="23" fill="1" visible="no" active="no"/>
 <layer number="223" name="223bmp" color="24" fill="1" visible="no" active="no"/>
 <layer number="224" name="224bmp" color="25" fill="1" visible="no" active="no"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
@@ -632,20 +648,14 @@ Source: http://focus.ti.com .. sn65176b.pdf</description>
 </package>
 <package name="TDFN-EP8">
 <smd name="3" x="-1.4" y="0" dx="0.3048" dy="0.1524" layer="1"/>
-<smd name="2" x="-1.4" y="0.5" dx="0.3048" dy="0.1524" layer="1"/>
-<smd name="1" x="-1.4" y="1" dx="0.3048" dy="0.1524" layer="1"/>
-<smd name="4" x="-1.4" y="-0.5" dx="0.3048" dy="0.1524" layer="1"/>
-<smd name="5" x="1.4" y="-0.5" dx="0.3048" dy="0.1524" layer="1"/>
-<smd name="6" x="1.4" y="0" dx="0.3048" dy="0.1524" layer="1"/>
-<smd name="7" x="1.4" y="0.5" dx="0.3048" dy="0.1524" layer="1"/>
-<smd name="8" x="1.4" y="1" dx="0.3048" dy="0.1524" layer="1"/>
-<polygon width="0" layer="1">
-<vertex x="-0.86" y="1.08"/>
-<vertex x="0.86" y="1.08"/>
-<vertex x="0.86" y="-0.58"/>
-<vertex x="-0.86" y="-0.58"/>
-</polygon>
-<smd name="TAB" x="0.02" y="0.25" dx="1.778" dy="1.778" layer="1" thermals="no" cream="no"/>
+<smd name="2" x="-1.4065" y="0.6495" dx="0.3048" dy="0.1524" layer="1"/>
+<smd name="1" x="-1.4065" y="1.299" dx="0.3048" dy="0.1524" layer="1"/>
+<smd name="4" x="-1.4" y="-0.6495" dx="0.3048" dy="0.1524" layer="1"/>
+<smd name="5" x="1.5475" y="-0.6495" dx="0.3048" dy="0.1524" layer="1"/>
+<smd name="6" x="1.5475" y="0" dx="0.3048" dy="0.1524" layer="1"/>
+<smd name="7" x="1.541" y="0.6495" dx="0.3048" dy="0.1524" layer="1"/>
+<smd name="8" x="1.541" y="1.2925" dx="0.3048" dy="0.1524" layer="1"/>
+<smd name="TAB" x="0.066" y="0.325" dx="1.58" dy="2.35" layer="1" thermals="no" cream="no"/>
 </package>
 <package name="9-WLP">
 <smd name="B2" x="0" y="0" dx="0.2794" dy="0.2794" layer="1" roundness="100"/>
@@ -677,8 +687,8 @@ Source: http://focus.ti.com .. sn65176b.pdf</description>
 <rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
 </package>
 <package name="SOT883">
-<smd name="2" x="-0.35" y="0.175" dx="0.3048" dy="0.1524" layer="1"/>
-<smd name="1" x="-0.35" y="-0.175" dx="0.3048" dy="0.1524" layer="1"/>
+<smd name="2" x="-0.35" y="-0.175" dx="0.3048" dy="0.1524" layer="1"/>
+<smd name="1" x="-0.35" y="0.175" dx="0.3048" dy="0.1524" layer="1"/>
 <smd name="3" x="0.35" y="0" dx="0.4064" dy="0.2032" layer="1" rot="R90"/>
 </package>
 <package name="SMDPAD">
@@ -1468,6 +1478,24 @@ Source: http://cache.national.com/ds/LP/LP2950.pdf</description>
 <vertex x="-2.794" y="2.286"/>
 <vertex x="-2.54" y="1.524"/>
 </polygon>
+</symbol>
+<symbol name="NPN">
+<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
+<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
+<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
+<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2294,6 +2322,23 @@ Source: http://cache.national.com/ds/LP/LP2950.pdf</description>
 <connects>
 <connect gate="G$1" pin="A" pad="P$1"/>
 <connect gate="G$1" pin="C" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BC847BMB315">
+<gates>
+<gate name="G$1" symbol="NPN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="BC847BMB315" package="SOT883">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
